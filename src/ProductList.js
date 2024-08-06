@@ -15,7 +15,6 @@ export default class ProductList extends Component {
               <th>#</th>
               <th>Product Name</th>
               <th>Unit Price (₺)</th>
-              {/* <th>Quantity Per Unit</th> */}
               <th>Units in Stock</th>
               <th></th>
             </tr>
@@ -28,7 +27,6 @@ export default class ProductList extends Component {
                   <th scope="row">{product.id}</th>
                   <td>{product.productName}</td>
                   <td>{product.unitPrice}</td>
-                  {/* <td>{product.quantityPerUnit}</td> */}
                   <td>{product.unitsInStock}</td>
                    <td><Button onClick = {()=> this.props.addToCart(product)} color="info">Add to Cart</Button></td> {/* Her bir urun icin ekleme butonu koydum, reactstrapten aldigim icin import ettim */}
                 </tr> // Her elemani digerinden ayiracak key(id) olusturduk

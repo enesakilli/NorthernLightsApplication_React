@@ -9,8 +9,9 @@ import NotFound from './NotFound';
 import CartList from './CartList';
 import FormDemo2 from './FormDemo2';
 import FormDemo1 from './FormDemo1';
-
-
+import Login from './Login';
+import Register from './Register';
+import Home from './Home';
 export default class App extends Component { // Class component yaptık
   
   state = { currentCategory: "",products:[], cart:[] };
@@ -73,7 +74,7 @@ export default class App extends Component { // Class component yaptık
             </Col>
             <Col xs="9">
               <Routes> {/* Switch artik Routes oldu, boyle kullanmamiz gerekli, sirasiyla rootlari gezmeyi saglar */}
-               <Route exact path="/" element = { // render artik kullanilmiyor update geldi
+               <Route exact path="/products" element = { // render artik kullanilmiyor update geldi
                   <ProductList // Ana sayfada ProductList olsun istiyorum ama ProductListte gondermem gereken cok fazla sey var bu nedenle RENDER kullaniyorum 
                     // {...props} veya {...this.props} proplarin bir tane kopyasini al onu gonder demek
                     products={this.state.products}
@@ -91,6 +92,9 @@ export default class App extends Component { // Class component yaptık
                 </Route>  
                 {/* <Route path='/form1' Component={FormDemo1}></Route> */}
                 <Route path='/form2' Component={FormDemo2}></Route>
+                <Route path='/' Component={Home}></Route>
+                <Route path='/login' Component={Login}></Route>
+                <Route path='/register' Component={Register}></Route>
                 <Route path="*" element={<NotFound />} /> {/* <Route element={<NotFound/>}></Route> */}  
               </Routes> 
             </Col>

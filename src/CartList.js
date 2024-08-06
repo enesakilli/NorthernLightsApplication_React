@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Button, Table} from 'reactstrap'
 import { Link } from 'react-router-dom'
+import { FaArrowLeft } from 'react-icons/fa'
 
 export default class CartList extends Component {
   renderCart(){
@@ -43,13 +44,24 @@ export default class CartList extends Component {
   render() {
     return (
         <div>
-          {this.renderCart()} {/* renderCarti burada cagirmamiz gerek */}
-            <div style={{ textAlign: 'right', marginTop: '20px'}}> {/* marginRight: '30px' */}
-              <Button color="info"> {/* Sepetteyken ana sayfaya dönmek, style={{ backgroundColor: '#3498db', color: '#fff' }}*/}
-                <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Go to Home Page</Link>
-              </Button>
-            </div>
+          <div style={{ textAlign: 'right', marginTop: '20px' }}> {/* Butonu sola hizalamak için marginRight'ı kaldırdık */}
+            <Button color="info" style={{ alignItems: 'center', justifyContent: 'flex-start', marginRight: '5%' }}>
+              <Link to="/products" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+              <FaArrowLeft style={{ marginRight: '12px', fontSize: '20px' }}/> Products
+              </Link>
+            </Button>
+          </div>
+          {this.renderCart()} {/* renderCarti burada cagirmamiz gerek, Bunu asagida cagirarak urunler kismina donmemizi saglayan oku yukari tasidim */}
         </div>
     )
   }
 }
+/*
+Go to Home Page yerine ok isareti koydum
+<Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Go to Home Page</Link>
+
+<Link to="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+  <FaArrowLeft style={{ marginRight: '8px' }} /> Go to Home Page
+</Link>
+
+*/
