@@ -35,16 +35,21 @@ export default class Navi extends Component { // Component --> React.Component
           </NavbarBrand>
            <NavbarToggler onClick={this.toggle}/>
           <Collapse isOpen={this.state.isOpen} navbar>
-          <div style={{  display: 'flex', width: '75%', justifyContent: 'space-between', flexWrap: 'nowrap', overflow: 'hidden', margin: '0 auto'}}></div> {/* Bunu yazica saga kaydirdi */}
-            <Nav className="me-auto" navbar>
+          <div style={{  display: 'flex', width: '70%', justifyContent: 'space-between', flexWrap: 'nowrap', overflow: 'hidden', margin: '0 auto'}}></div> {/* Bunu yazica saga kaydirdi */}
+            <Nav className="me-auto" navbar> 
               {/* <NavItem>
                 <NavLink id='Form1'>
                   <Link to="form1" style={{ textDecoration:'none', fontWeight: 'bold', color: 'black'}}>Form 1</Link> 
                 </NavLink>
               </NavItem> */}
               <NavItem>
+                <NavLink id='Products'> {/* style={{ textDecoration: 'none', color: 'inherit' }} Formun alti cizili ve rengi maviydi onları kaldırmak icin bunları ekledim */}
+                  <Link to="products" style={{ textDecoration:'none', fontWeight: 'bold', color: 'black'}}>Products</Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink id='Form2'> {/* style={{ textDecoration: 'none', color: 'inherit' }} Formun alti cizili ve rengi maviydi onları kaldırmak icin bunları ekledim */}
-                  <Link to="form2" style={{ textDecoration:'none', fontWeight: 'bold', color: 'black'}}>Form</Link>
+                  <Link to="form2" style={{ textDecoration:'none', fontWeight: 'bold', color: 'black'}}>Profile</Link>
                 </NavLink>
               </NavItem>
                <CartSummary removeFromCart = {this.props.removeFromCart} cart={this.props.cart}></CartSummary> {/* // Carti CartSummarye ekledim */}

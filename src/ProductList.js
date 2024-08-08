@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Table, Button } from "reactstrap";
-
+import "./ProductList.css";
 export default class ProductList extends Component {
 
   render() {
     return (
       <div>
-        <h4>
+        <h4 id="h4">
           {this.props.info.title} - {this.props.currentCategory} {/* Products-Category, Kategori secinde belirtiyor */}
         </h4>
         <Table>
@@ -28,7 +28,7 @@ export default class ProductList extends Component {
                   <td>{product.productName}</td>
                   <td>{product.unitPrice}</td>
                   <td>{product.unitsInStock}</td>
-                   <td><Button onClick = {()=> this.props.addToCart(product)} color="info">Add to Cart</Button></td> {/* Her bir urun icin ekleme butonu koydum, reactstrapten aldigim icin import ettim */}
+                   <td><Button onClick = {()=> this.props.addToCart(product)} style={{ backgroundColor: '#667BC6', color: '#fff', border: '1px solid #667BC6', borderRadius: '5px' }}>Add to Cart</Button></td> {/* Her bir urun icin ekleme butonu koydum, reactstrapten aldigim icin import ettim */}
                 </tr> // Her elemani digerinden ayiracak key(id) olusturduk
                 )
               )

@@ -14,8 +14,9 @@ const Home = () => {
             padding: '10px 20px',
             textDecoration: 'none',
             color: '#fff',
-            backgroundColor: '#007bff',
-            borderRadius: '5px'
+            backgroundColor: '#667BC6',
+            borderRadius: '5px',
+            // fontWeight: 'bold'
           }}
         >
           Login
@@ -27,8 +28,9 @@ const Home = () => {
             padding: '10px 20px',
             textDecoration: 'none',
             color: '#fff',
-            backgroundColor: '#28a745',
-            borderRadius: '5px'
+            backgroundColor: '#667BC6',
+            borderRadius: '5px',
+            // fontWeight: 'bold'
           }}
         >
           Register

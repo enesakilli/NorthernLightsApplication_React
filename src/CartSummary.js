@@ -31,7 +31,7 @@ export default class CartSummary extends Component {
                 <DropdownItem divider />
                 <DropdownItem>
                 <Link to="cart"> {/* react-router-domdan gelir, cart routesine git demek */}
-                    <button type="button" className="btn btn-info" style={{ width: '100%'}}>
+                    <button type="button" style={{ width: '100%', color: '#fff', backgroundColor: '#667BC6', border: '1px solid #667BC6', borderRadius: '5px'}}> {/* className="btn btn-info" */}
                         Go to Cart
                     </button>
                 </Link> 
@@ -49,8 +49,8 @@ export default class CartSummary extends Component {
     }
     
     render() {
-        return <div> {this.props.cart.length > 0 ? this.renderSummary() : this.renderEmptyCart()} </div>; // Sepet bossa cart gozukmuyor, sepete urun ekleyince gozukuyor
-    }
+        return <div> {this.props.cart.length > 0 ? this.renderSummary() : this.renderEmptyCart()} </div>; 
+    } // Sepet bossa cart gozukmuyor, sepete urun ekleyince gozukuyor
 }
 /*
 <Link to="cart">

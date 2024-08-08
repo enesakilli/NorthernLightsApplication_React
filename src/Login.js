@@ -43,7 +43,7 @@ const Login = () => {
           />
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '5px' }}>
+        <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#667BC6', color: '#fff', border: 'none', borderRadius: '5px' }}>
           Login
         </button>
       </form>

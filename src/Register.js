@@ -40,7 +40,7 @@ const Register = () => {
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            required
+            required // Required ile kullanıcının formu göndermeden önce belirli bir alanın doldurmasını zorunlu kılar
             style={{ width: '100%', padding: '8px', marginTop: '5px' }}
           />
         </div>
@@ -79,7 +79,7 @@ const Register = () => {
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
         {success && <p style={{ color: 'green' }}>{success}</p>}
-        <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '5px' }}>
+        <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#667BC6', color: '#fff', border: 'none', borderRadius: '5px' }}>
           Register
         </button>
       </form>

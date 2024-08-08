@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Button, Table} from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { FaArrowLeft } from 'react-icons/fa'
-
+import './CartList.css'
 export default class CartList extends Component {
   renderCart(){
     return (
@@ -43,9 +43,9 @@ export default class CartList extends Component {
   
   render() {
     return (
-        <div>
+        <div className='cartList'>
           <div style={{ textAlign: 'right', marginTop: '20px' }}> {/* Butonu sola hizalamak için marginRight'ı kaldırdık */}
-            <Button color="info" style={{ alignItems: 'center', justifyContent: 'flex-start', marginRight: '5%' }}>
+            <Button style={{ color: '#fff', backgroundColor: '#667BC6', alignItems: 'center', justifyContent: 'flex-start', marginRight: '5%', border: '1px solid #667BC6', borderRadius: '5px' }}>
               <Link to="/products" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
               <FaArrowLeft style={{ marginRight: '12px', fontSize: '20px' }}/> Products
               </Link>

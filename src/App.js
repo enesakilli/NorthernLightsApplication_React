@@ -12,6 +12,8 @@ import FormDemo1 from './FormDemo1';
 import Login from './Login';
 import Register from './Register';
 import Home from './Home';
+import './App.css';
+
 export default class App extends Component { // Class component yaptık
   
   state = { currentCategory: "",products:[], cart:[] };
@@ -59,23 +61,27 @@ export default class App extends Component { // Class component yaptık
 
   render() {
     let productInfo = {title: "Products"}; // Yeni bir sey ekledigimizde tek tek her yere eklemek yerine, mesela somethingElse:"something" gibi
-    let categoryInfo = { title: " Categories" };// Virgul koyar yanina yazarim sonra digeri gibi islemini yaparim, Burada Encapsulation yapmıs oldum
+    let categoryInfo = {title: ""};// Virgul koyar yanina yazarim sonra digeri gibi islemini yaparim, Burada Encapsulation yapmıs oldum
     return ( 
-      <div>
+      <div className='App1'>
         <Container>
             <Navi removeFromCart = {this.removeFromCart} cart={this.state.cart}></Navi> {/* Row icerisinde oldugundan sol tarafta cikiyordu, Rowu sildim ama duzelmedi, style={{ position: 'absolute', right: '5px'}} */} 
           <Row>
-            <Col xs="3">
-              <CategoryList 
-              currentCategory={this.state.currentCategory} 
-              changeCategory={this.changeCategory} 
-              info={categoryInfo}>
-              </CategoryList>
+            <Col> {/* xs='3' */}
+              <Routes>
+                <Route exact path="/products" element = {
+                  <CategoryList 
+                    currentCategory={this.state.currentCategory} 
+                    changeCategory={this.changeCategory} 
+                    info={categoryInfo}>
+                </CategoryList>}>
+                </Route>
+              </Routes>
             </Col>
-            <Col xs="9">
+            <Col> {/* xs='9' */}
               <Routes> {/* Switch artik Routes oldu, boyle kullanmamiz gerekli, sirasiyla rootlari gezmeyi saglar */}
-               <Route exact path="/products" element = { // render artik kullanilmiyor update geldi
-                  <ProductList // Ana sayfada ProductList olsun istiyorum ama ProductListte gondermem gereken cok fazla sey var bu nedenle RENDER kullaniyorum 
+               <Route exact path="/products" element = { // render artik kullanilmiyor update geldigi icin
+                  <ProductList // products sayfasında ProductList olsun istiyorum ama ProductListte gondermem gereken cok fazla sey var bu nedenle RENDER kullaniyorum 
                     // {...props} veya {...this.props} proplarin bir tane kopyasini al onu gonder demek
                     products={this.state.products}
                     addToCart={this.addToCart} 
