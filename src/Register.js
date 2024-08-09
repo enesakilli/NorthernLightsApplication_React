@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import alertify from 'alertifyjs';
+import './Register.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -30,8 +31,8 @@ const Register = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }}>
-      <h2>Register</h2>
+    <div className='registerContainer'> {/* style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }} */}
+      <p id='p1'>Register</p>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '15px' }}>
           <label htmlFor="username">Username</label>

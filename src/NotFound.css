@@ -1,0 +1,9 @@
+.notFoundContainer {
+    height: 40vh;
+    width: 40vw;
+    margin: 0; 
+    padding: 0;
+    margin-top: 70px;
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -11,11 +11,10 @@ export default class CartList extends Component {
           <tr>
             {/* <th>#</th> */}
             {/* <th>Category Id</th> */}
-            <th>Product Name</th>
-            <th>Unit Price (₺)</th>
-            <th>Units in Stock</th>
-            <th>Quantity</th>
-            <th></th> 
+            <th className='th'>Product Name</th>
+            <th className='th'>Unit Price (₺)</th>
+            <th className='th'>Units in Stock</th>
+            <th className='th'>Quantity</th>
           </tr>
         </thead>
         <tbody>
@@ -24,10 +23,10 @@ export default class CartList extends Component {
               <tr key={cartItem.product.id}>
                 {/* <td>{cartItem.product.id}</td> */}
                 {/* <td>{cartItem.product.categoryId}</td> */}
-                <td>{cartItem.product.productName}</td>
-                <td>{cartItem.product.unitPrice}</td>
-                <td>{cartItem.product.unitsInStock}</td>
-                <td>{cartItem.quantity}</td>
+                <td className='td'>{cartItem.product.productName}</td>
+                <td className='td'>{cartItem.product.unitPrice}</td>
+                <td className='td'>{cartItem.product.unitsInStock}</td>
+                <td className='td'>{cartItem.quantity}</td>
                 <td>
                   <Button color="danger" onClick={() => this.props.removeFromCart(cartItem.product)}>
                     Remove

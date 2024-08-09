@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -17,8 +18,8 @@ const Login = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }}>
-      <h2>Login</h2>
+    <div className='loginContainer'> {/* style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }} */}
+      <p id='p2'>Login</p>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '15px' }}>
           <label htmlFor="username">Username</label>

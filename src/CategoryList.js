@@ -24,7 +24,7 @@ export default class CategoryList extends Component {
 
   render() {
     return (
-      <div className='categoryContainer'>
+      <div className="categoryContainer">
         <h4>{this.props.info.title}</h4> {/* app.js de title(veya verdigimiz isim) ne isim verirsek h3 seklinde o gozukur */}
         <ListGroup>
           { // ListGroup u eleman sayisi kadar calistiracagiz
@@ -42,6 +42,7 @@ export default class CategoryList extends Component {
     )
   }
 }
+
 /*
   <ListGroup>
     { // ListGroup u eleman sayisi kadar calistiracagiz

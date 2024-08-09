@@ -5,7 +5,7 @@ export default class ProductList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="productContainer">
         <h4 id="h4">
           {this.props.info.title} - {this.props.currentCategory} {/* Products-Category, Kategori secinde belirtiyor */}
         </h4>

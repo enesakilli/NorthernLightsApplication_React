@@ -1,4 +1,7 @@
 import React, { Component } from 'react' // import React from "react";
+import CartSummary from "./CartSummary";
+import {Link} from 'react-router-dom';
+import './Navi.css';
 import {
   Collapse,
   Navbar,
@@ -8,8 +11,6 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import CartSummary from "./CartSummary";
-import {Link} from 'react-router-dom';
 
 export default class Navi extends Component { // Component --> React.Component
   constructor(props) {

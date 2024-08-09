@@ -1,0 +1,15 @@
+.loginContainer {
+    height: 30vh;
+    width: 30vw;
+    margin: 0; 
+    padding: 0;
+    margin-right: 35vh;
+    margin-top: 30px;
+    font-size: 18;
+    font-weight: bold;
+}
+
+#p2 {
+    font-weight: bold;
+    font-size: 28px;
+}
