@@ -1,8 +1,35 @@
-.cartList {
+.cartContainer {
     height: 70vh;
     width: 70vw;
     margin: 0; 
     padding: 0;
+}
+
+.buttonToRight {
+    text-align: right; 
+    margin-top: 20px;
+}
+
+#cartButton { 
+    color: white;
+    background-color: #667BC6;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-right: '5%'; 
+    border: 1px solid #667BC6; 
+    border-radius: '5px';
+}
+
+#cartLink {
+    color: white; 
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+}
+
+#arrow {
+    margin-right: 12px;
+    font-size: 20px;
 }
 
 .th {

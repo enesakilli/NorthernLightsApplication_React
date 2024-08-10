@@ -23,12 +23,12 @@ export default class ProductList extends Component {
             {this.props.products.map(product => ( // ListGroup u eleman sayisi kadar calistiracagiz  
                 // Array old icin Map kullandık, map bir dongudur, eleman sayisi kadar tek tek doner, burada category eleman sayisidir
                 // this.state.categories.map is not a function --> map bir array degilse bu hata alinir
-                <tr key={product.id}>
+                <tr key={product.id}> {/* React/JS zorunlu tutuyor keyi */}
                   <th scope="row">{product.id}</th>
                   <td>{product.productName}</td>
                   <td>{product.unitPrice}</td>
                   <td>{product.unitsInStock}</td>
-                   <td><Button onClick = {()=> this.props.addToCart(product)} style={{ backgroundColor: '#667BC6', color: '#fff', border: '1px solid #667BC6', borderRadius: '5px' }}>Add to Cart</Button></td> {/* Her bir urun icin ekleme butonu koydum, reactstrapten aldigim icin import ettim */}
+                   <td><Button id="productListButton" onClick = {()=> this.props.addToCart(product)}>Add to Cart</Button></td> {/* Her bir urun icin ekleme butonu koydum, reactstrapten aldigim icin import ettim */}
                 </tr> // Her elemani digerinden ayiracak key(id) olusturduk
                 )
               )

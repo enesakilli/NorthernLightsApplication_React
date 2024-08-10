@@ -9,7 +9,29 @@
     font-weight: bold;
 }
 
+.loginSecondContainer{
+    margin-bottom: 15px;
+}
+
+.loginThirdContainer{
+    margin-bottom: 15px;
+}
+
 #p2 {
     font-weight: bold;
     font-size: 28px;
+}
+
+.loginInput {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#loginButton {
+    padding: 10px 20px;
+    background-color: #667BC6;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

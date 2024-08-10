@@ -42,11 +42,11 @@ export default class CartList extends Component {
   
   render() {
     return (
-        <div className='cartList'>
-          <div style={{ textAlign: 'right', marginTop: '20px' }}> {/* Butonu sola hizalamak için marginRight'ı kaldırdık */}
-            <Button style={{ color: '#fff', backgroundColor: '#667BC6', alignItems: 'center', justifyContent: 'flex-start', marginRight: '5%', border: '1px solid #667BC6', borderRadius: '5px' }}>
-              <Link to="/products" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-              <FaArrowLeft style={{ marginRight: '12px', fontSize: '20px' }}/> Products
+        <div className='cartContainer'>
+          <div className='buttonToRight'> {/* Butonu sola hizalamak için marginRight'ı kaldırdık */}
+            <Button id='cartButton'>
+              <Link to="/products" id='cartLink'>
+              <FaArrowLeft id='arrow'/> Products
               </Link>
             </Button>
           </div>
@@ -55,6 +55,7 @@ export default class CartList extends Component {
     )
   }
 }
+
 /*
 Go to Home Page yerine ok isareti koydum
 <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Go to Home Page</Link>

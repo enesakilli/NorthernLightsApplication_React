@@ -27,7 +27,7 @@ export default class FormDemo2 extends Component {
         <div className='profileContainer2'>
           <Form onSubmit={this.handleSubmit}>
               <FormGroup>
-                  <Label for="email" style={{fontWeight: 'bold', fontSize: 18}}>E-mail</Label> {/* label htmlden gelir, Label reactstrapten gelir */}
+                  <Label className='profileLabel' for="email">E-mail</Label> {/* label htmlden gelir, Label reactstrapten gelir */}
                   <Input 
                       type="email" 
                       name="email" 
@@ -37,7 +37,7 @@ export default class FormDemo2 extends Component {
                   </Input> {/* Buradaki name e statede ne isim verdiysen onu vermek zorundasin */}  
               </FormGroup>
               <FormGroup>
-                  <Label for="password" style={{fontWeight: 'bold', fontSize: 18}}>Password</Label> 
+                  <Label className='profileLabel' for="password">Password</Label> 
                   <Input 
                       type="password" 
                       name="password" 
@@ -47,14 +47,14 @@ export default class FormDemo2 extends Component {
                   </Input> 
               </FormGroup>
               <FormGroup>
-                  <Label for="gender" style={{fontWeight: 'bold', fontSize: 18}}>Gender</Label> 
+                  <Label className='profileLabel' for="gender">Gender</Label> 
                   <Input type="select" name="gender" id="gender" onChange={this.handleChange}>
                     <option>Male</option>
                     <option>Female</option>
                   </Input>
                 </FormGroup>
               <FormGroup>
-                  <Label for="city" style={{fontWeight: 'bold', fontSize: 18}}>City</Label> 
+                  <Label className='profileLabel' for="city">City</Label> 
                   <Input type="select" name="city" id="city" onChange={this.handleChange}>
                     <option>Adana</option>
                     <option>Adiyaman</option>
@@ -140,7 +140,7 @@ export default class FormDemo2 extends Component {
                   </Input>
               </FormGroup>
               <FormGroup>
-                  <Label for="address" style={{fontWeight: 'bold', fontSize: 18}}>Address</Label> 
+                  <Label className='profileLabel' for="address">Address</Label> 
                   <Input 
                       type="textarea" // Daha buyuk bir alan verdim
                       name="address" 
@@ -149,7 +149,7 @@ export default class FormDemo2 extends Component {
                       onChange={this.handleChange}>
                   </Input> 
               </FormGroup>
-              <Button type="submit" style={{ color: '#fff', backgroundColor: '#667BC6', border: '1px solid #667BC6', borderRadius: '5px'}}>Save</Button>
+              <Button id='profileButton' type="submit">Save</Button>
           </Form>
         </div>
       </div>

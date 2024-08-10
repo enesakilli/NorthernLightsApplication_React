@@ -1,0 +1,27 @@
+.naviContainer1 {
+    background-color: rgb(245, 243, 243);
+    height: 70px;
+}
+
+.naviContainer2{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.link1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.link2 {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}

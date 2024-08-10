@@ -9,7 +9,25 @@
     font-weight: bold;
 }
 
+.registerSecondContainer{
+    margin-bottom: 15px;
+}
+
 #p1 {
     font-weight: bold;
     font-size: 28px;
+}
+
+.registerInput {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#registerButton {
+    padding: 10px 20px;
+    background-color: #667BC6;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

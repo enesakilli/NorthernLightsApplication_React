@@ -6,34 +6,12 @@ const Home = () => {
   return (
     <div className='homeContianer' style={{ textAlign: 'center', padding: '20px' }}>
       <h2 id='h2'>NorthernLights</h2>
-      <p id='p'>Please choose an option from the menu below.</p>
+      <p id='p'>Please choose an option from the menu below</p>
       <div style={{ marginTop: '20px' }}>
-        <Link
-          to="/login"
-          style={{
-            margin: '0 10px',
-            padding: '10px 20px',
-            textDecoration: 'none',
-            color: '#fff',
-            backgroundColor: '#667BC6',
-            borderRadius: '5px',
-            // fontWeight: 'bold'
-          }}
-        >
+        <Link id='homeLoginLink' to="/login">
           Login
         </Link>
-        <Link
-          to="/register"
-          style={{
-            margin: '0 10px',
-            padding: '10px 20px',
-            textDecoration: 'none',
-            color: '#fff',
-            backgroundColor: '#667BC6',
-            borderRadius: '5px',
-            // fontWeight: 'bold'
-          }}
-        >
+        <Link id='homeRegisterLink' to="/register">
           Register
         </Link>
       </div>

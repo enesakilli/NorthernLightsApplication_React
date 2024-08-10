@@ -16,3 +16,23 @@
 #p {
     font-size: 17px;
 }
+
+#homeLoginLink {
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #667BC6;
+    border-radius: 5px;
+    /* font-weight: bold */
+}
+
+#homeRegisterLink {
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #667BC6;
+    border-radius: 5px;
+    /* font-weight: bold; */
+}

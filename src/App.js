@@ -8,7 +8,6 @@ import { Routes, Route } from 'react-router-dom'; // Switch decleration artik Ro
 import NotFound from './NotFound';
 import CartList from './CartList';
 import FormDemo2 from './FormDemo2';
-import FormDemo1 from './FormDemo1';
 import Login from './Login';
 import Register from './Register';
 import Home from './Home';
@@ -63,7 +62,7 @@ export default class App extends Component { // Class component yaptık
     let productInfo = {title: "Products"}; // Yeni bir sey ekledigimizde tek tek her yere eklemek yerine, mesela somethingElse:"something" gibi
     let categoryInfo = {title: ""};// Virgul koyar yanina yazarim sonra digeri gibi islemini yaparim, Burada Encapsulation yapmıs oldum
     return ( 
-      <div className='App1'>
+      <div className='App'>
         <Container>
             <Navi removeFromCart = {this.removeFromCart} cart={this.state.cart}></Navi> {/* Row icerisinde oldugundan sol tarafta cikiyordu, Rowu sildim ama duzelmedi, style={{ position: 'absolute', right: '5px'}} */} 
           <Row>
@@ -110,6 +109,7 @@ export default class App extends Component { // Class component yaptık
     );
   }
 }
+
 // <Route path='form1' Component={FormDemo1}></Route>
 // <Route path='form1' element={<FormDemo1 />} />
 

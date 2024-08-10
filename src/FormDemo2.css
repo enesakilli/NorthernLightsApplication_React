@@ -7,5 +7,17 @@
 }
 
 .profileContainer2 {
-    width: 50vw;
+    width: 35vw;
 } 
+
+.profileLabel{
+    font-weight: bold;
+    font-size: 18;
+}
+
+#profileButton {
+    color: white;
+    background-color: #667BC6;
+    border: 1px solid #667BC6;
+    border-radius: 5px;
+}
