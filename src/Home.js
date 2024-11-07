@@ -7,11 +7,11 @@ const Home = () => {
     <div className='homeContianer'>
       <h2 id='h2'>NorthernLights</h2>
       <p id='p'>Please choose an option from the menu below</p>
-      <div className='buttonLocation'>
-        <Link id='homeLoginLink' to="/login">
+      <div className='buttonLocation'> {/* ayrı bir div icine aldik cunku sadece bu butonlarin konumunu degistirebilelim, ayri div icine almazsak yazilarla birlikte degisecekti */}
+        <Link id='homeLoginLink' to="/login"> {/* Burada /login e giden tiklanacak link koyduk ve App.js de /login URL'sini {Login} sayfasi ile eslestirdik */}
           Login
         </Link>
-        <Link id='homeRegisterLink' to="/register">
+        <Link id='homeRegisterLink' to="/register"> {/* Bu kisimda Route Bileseni kullanmaya gerek yoktur*/}
           Register
         </Link>
       </div>

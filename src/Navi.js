@@ -1,6 +1,6 @@
-import React, { Component } from 'react' // import React from "react";
+import React, { useState } from 'react'; // import React from "react";
 import CartSummary from "./CartSummary";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navi.css';
 import {
   Collapse,
@@ -12,55 +12,48 @@ import {
   NavLink,
 } from "reactstrap";
 
-export default class Navi extends Component { // Component --> React.Component
-  constructor(props) {
-    super(props);
+const Navi = (props) => { 
+  const [isOpen, setIsOpen] = useState(false); 
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
+  const toggle = () => { 
+    setIsOpen(!isOpen); 
+  };
 
-  render() {
-    return (
-      <div className='naviContainer1'>
-        <Navbar light expand="md"> {/* style={{ height: '60px' }} Bu kod ile navbar boyutu ayarladim*/}
-          <NavbarBrand className='Navbar'>
-            <Link to="/" className='link1'>NorthernLights</Link>
-          </NavbarBrand>
-           <NavbarToggler onClick={this.toggle}/>
-          <Collapse isOpen={this.state.isOpen} navbar>
+  return (
+    <div className='naviContainer1'>
+      <Navbar light expand="md"> {/* style={{ height: '60px' }} Bu kod ile navbar boyutu ayarladim*/}
+        <NavbarBrand className='Navbar'>
+          <Link to="/" className='link1'>NorthernLights</Link>
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle}/>
+        <Collapse isOpen={isOpen} navbar>
           <div className='naviContainer2'></div> {/* Bunu yazica saga kaydirdi */}
-            <Nav className="me-auto" navbar> 
-              {/* <NavItem>
-                <NavLink id='Form1'>
-                  <Link to="form1" style={{ textDecoration:'none', fontWeight: 'bold', color: 'black'}}>Form 1</Link> 
-                </NavLink>
-              </NavItem> */}
-              <NavItem>
-                <NavLink id='Products'> {/* style={{ textDecoration: 'none', color: 'inherit' }} Formun alti cizili ve rengi maviydi onları kaldırmak icin bunları ekledim */}
-                  <Link to="products" className='link2'>Products</Link>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink id='Form2'> {/* style={{ textDecoration: 'none', color: 'inherit' }} Formun alti cizili ve rengi maviydi onları kaldırmak icin bunları ekledim */}
-                  <Link to="form2" className='link2'>Profile</Link>
-                </NavLink>
-              </NavItem>
-               <CartSummary removeFromCart = {this.props.removeFromCart} cart={this.props.cart}></CartSummary> {/* // Carti CartSummarye ekledim */}
-            </Nav> {/* Appde propssuz burada props ile yaptik cunku burada removeFromCart diye bir sey yok {this.props.removeFromCart} */}
-          </Collapse>
-        </Navbar>
-      </div>
-    );
-  }
-}
+          <Nav className="me-auto" navbar> 
+            {/* <NavItem>
+              <NavLink id='Form1'>
+                <Link to="form1" style={{ textDecoration:'none', fontWeight: 'bold', color: 'black'}}>Form 1</Link> 
+              </NavLink>
+            </NavItem> */}
+            <NavItem>
+              <NavLink id='Products'> {/* style={{ textDecoration: 'none', color: 'inherit' }} Formun alti cizili ve rengi maviydi onları kaldırmak icin bunları ekledim */}
+                <Link to="products" className='link2'>Products</Link>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink id='Form2'> {/* style={{ textDecoration: 'none', color: 'inherit' }} Formun alti cizili ve rengi maviydi onları kaldırmak icin bunları ekledim */}
+                <Link to="form2" className='link2'>Profile</Link>
+              </NavLink>
+            </NavItem>
+            <CartSummary removeFromCart={props.removeFromCart} cart={props.cart}></CartSummary> {/* // Carti CartSummarye ekledim */}
+          </Nav> {/* Appde propssuz burada props ile yaptik cunku burada removeFromCart diye bir sey yok {props.removeFromCart} */}
+        </Collapse>
+      </Navbar>
+    </div>
+  );
+};
+
+export default Navi;
+
 
 /*
 <div className="d-flex w-100 justify-content-between"> --> Bunu yazica saga kaydirdi

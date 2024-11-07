@@ -10,23 +10,23 @@ const Register = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => { // Sayfanin yeniden yüklemesini engeller
     event.preventDefault();
     alertify.success(username + ' added to database', 3); // Registration Successful yazisindan sonra databaseye eklendigi bilgisi gelecek
     alertify.success(email + ' added to database', 3);
     alertify.success('Password added to database', 3);
     
-    if (password !== confirmPassword) {
+    if (password !== confirmPassword) { // Sifreler uyusmuyorsa hata mesaji
       setError('Passwords do not match');
       return;
     }
 
-    if (username && email && password) {
+    if (username && email && password) { // Tum alanlar doluysa successful
       setSuccess('Registration Successful');
       setError('');
-      // Burada bir API cagrisi yapilmali
-    } else {
-      setError('Please fill in all the blanks');
+      // Burada bir API cagrisi yapilmali --> kullaniciyi dogrulamak için backend'e istek gonderilmeli
+    } else { 
+      setError('Please fill in all the blanks');  // Boş alanlar varsa hata mesaji
     }
   };
 

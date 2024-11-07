@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
-import {Button, Table} from 'reactstrap'
-import { Link } from 'react-router-dom'
-import { FaArrowLeft } from 'react-icons/fa'
-import './CartList.css'
-export default class CartList extends Component {
-  renderCart(){
+import React from 'react';
+import { Button, Table } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
+import './CartList.css';
+
+const CartList = ({ cart, removeFromCart }) => {
+
+  const renderCart = () => {
     return (
       <Table striped>
         <thead>
@@ -19,7 +21,7 @@ export default class CartList extends Component {
         </thead>
         <tbody>
           { // Sepet buraya gelecek map uyguluyorum
-            this.props.cart.map(cartItem => (
+            cart.map(cartItem => (
               <tr key={cartItem.product.id}>
                 {/* <td>{cartItem.product.id}</td> */}
                 {/* <td>{cartItem.product.categoryId}</td> */}
@@ -28,7 +30,7 @@ export default class CartList extends Component {
                 <td className='tdCart'>{cartItem.product.unitsInStock}</td>
                 <td className='tdCart'>{cartItem.quantity}</td>
                 <td>
-                  <Button id='cartListButton' onClick={() => this.props.removeFromCart(cartItem.product)}>
+                  <Button id='cartListButton' onClick={() => removeFromCart(cartItem.product)}>
                     Remove
                   </Button>
                 </td>
@@ -39,22 +41,23 @@ export default class CartList extends Component {
       </Table>
     )
   }
-  
-  render() {
-    return (
-        <div className='cartContainer'>
-          <div className='buttonToRight'> {/* Butonu sola hizalamak için marginRight'ı kaldırdık */}
-            <Button id='cartToProductsButton'>
-              <Link to="/products" id='cartLink'>
-              <FaArrowLeft id='arrow'/> Products
-              </Link>
-            </Button>
-          </div>
-          {this.renderCart()} {/* renderCarti burada cagirmamiz gerek, Bunu asagida cagirarak urunler kismina donmemizi saglayan oku yukari tasidim */}
-        </div>
-    )
-  }
+
+  return (
+    <div className='cartContainer'>
+      <div className='buttonToRight'> {/* Butonu sola hizalamak için marginRight'ı kaldırdık */}
+        <Button id='cartToProductsButton'>
+          <Link to="/products" id='cartLink'>
+            <FaArrowLeft id='arrow' /> Products
+          </Link>
+        </Button>
+      </div>
+      {renderCart()} {/* renderCarti burada cagirmamiz gerek, Bunu asagida cagirarak urunler kismina donmemizi saglayan oku yukari tasidim */}
+    </div>
+  );
 }
+
+export default CartList;
+
 
 /*
 Go to Home Page yerine ok isareti koydum
