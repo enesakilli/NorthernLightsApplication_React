@@ -22,8 +22,8 @@ export default class CartSummary extends Component {
                 <DropdownMenu right>
                 {
                     this.props.cart.map(cartItem => (
-                    <DropdownItem key = {cartItem.product.id}>
-                        <Badge color="danger" onClick={()=>this.props.removeFromCart(cartItem.product)}>X</Badge> {/* Eklenen urunleri silmemizi saglar */}
+                    <DropdownItem id='cartSummaryItem' key = {cartItem.product.id}>
+                        <Badge id='cartSummarySmallButton' onClick={()=>this.props.removeFromCart(cartItem.product)}>X</Badge> {/* Eklenen urunleri silmemizi saglar */}
                         {cartItem.product.productName}
                         <span id='cartSummarySpan'>- Quantity: {cartItem.quantity}</span> {/* Eklenen urunlerin kac adet oldugunu gosteriyor */} 
                     </DropdownItem>    
@@ -44,7 +44,7 @@ export default class CartSummary extends Component {
     renderEmptyCart(){
         return( // Bir sey dondurmek icin return ile yazdim, JSX formatinda
             <NavItem>
-                <NavLink id='cartSummaryNavLink'>Cart is Empty</NavLink>
+                <NavLink id='cartSummaryEmpty'>Cart is Empty</NavLink>
             </NavItem>  
         )
     }

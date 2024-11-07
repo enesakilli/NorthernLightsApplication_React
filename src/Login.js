@@ -6,7 +6,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => { // Sayfayı yeniden yüklemesini engeller
     event.preventDefault();
     
     if (username === 'user' && password === 'password') {

@@ -12,11 +12,11 @@ export default class ProductList extends Component {
         <Table>
           <thead>
             <tr>
-              <th>#</th>
-              <th>Product Name</th>
-              <th>Unit Price (₺)</th>
-              <th>Units in Stock</th>
-              <th></th>
+              <th className='thProducts'>#</th>
+              <th className='thProducts'>Product Name</th>
+              <th className='thProducts'>Unit Price (₺)</th>
+              <th className='thProducts'>Units in Stock</th>
+              <th className='thProducts'></th>
             </tr>
           </thead>
           <tbody>
@@ -24,10 +24,10 @@ export default class ProductList extends Component {
                 // Array old icin Map kullandık, map bir dongudur, eleman sayisi kadar tek tek doner, burada category eleman sayisidir
                 // this.state.categories.map is not a function --> map bir array degilse bu hata alinir
                 <tr key={product.id}> {/* React/JS zorunlu tutuyor keyi */}
-                  <th scope="row">{product.id}</th>
-                  <td>{product.productName}</td>
-                  <td>{product.unitPrice}</td>
-                  <td>{product.unitsInStock}</td>
+                  <th className='tdProducts' scope="row">{product.id}</th>
+                  <td className='tdProducts'>{product.productName}</td>
+                  <td className='tdProducts'>{product.unitPrice}</td>
+                  <td className='tdProducts'>{product.unitsInStock}</td>
                    <td><Button id="productListButton" onClick = {()=> this.props.addToCart(product)}>Add to Cart</Button></td> {/* Her bir urun icin ekleme butonu koydum, reactstrapten aldigim icin import ettim */}
                 </tr> // Her elemani digerinden ayiracak key(id) olusturduk
                 )

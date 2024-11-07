@@ -2,19 +2,27 @@
     height: 65vh;
     width: 65vw;
     margin: 0; 
-    padding: 0;
+    padding: 20px;
     margin-top: 70px;
     margin-right: 20vh;
+    text-align: center;
+}
+
+.buttonLocation {
+    margin-top: 20px;
 }
 
 #h2 {
     font-weight: bold;
     font-size: 36px;
     margin-bottom: 20px;
+    color: #921A40;
 }
 
 #p {
     font-size: 17px;
+    font-weight: 500;
+    color: #921A40;
 }
 
 #homeLoginLink {
@@ -22,7 +30,8 @@
     padding: 10px 20px;
     text-decoration: none;
     color: white;
-    background-color: #667BC6;
+    background-color: #921A40;
+    border: 1px solid black;
     border-radius: 5px;
     /* font-weight: bold */
 }
@@ -31,8 +40,9 @@
     margin: 0 10px;
     padding: 10px 20px;
     text-decoration: none;
-    color: #fff;
-    background-color: #667BC6;
+    color: white;
+    background-color: #921A40;
+    border: 1px solid black;
     border-radius: 5px;
     /* font-weight: bold; */
 }

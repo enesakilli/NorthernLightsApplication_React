@@ -1,5 +1,5 @@
 .naviContainer1 {
-    background-color: rgb(245, 243, 243);
+    background-color: #F5EDED;
     height: 70px;
 }
 
@@ -17,11 +17,11 @@
     font-weight: bold;
     margin-left: 10px;
     text-decoration: none;
-    color: black;
+    color: #921A40;
 }
 
 .link2 {
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: #921A40;
 }

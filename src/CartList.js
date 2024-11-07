@@ -11,10 +11,10 @@ export default class CartList extends Component {
           <tr>
             {/* <th>#</th> */}
             {/* <th>Category Id</th> */}
-            <th className='th'>Product Name</th>
-            <th className='th'>Unit Price (₺)</th>
-            <th className='th'>Units in Stock</th>
-            <th className='th'>Quantity</th>
+            <th className='thCart'>Product Name</th>
+            <th className='thCart'>Unit Price (₺)</th>
+            <th className='thCart'>Units in Stock</th>
+            <th className='thCart'>Quantity</th>
           </tr>
         </thead>
         <tbody>
@@ -23,12 +23,12 @@ export default class CartList extends Component {
               <tr key={cartItem.product.id}>
                 {/* <td>{cartItem.product.id}</td> */}
                 {/* <td>{cartItem.product.categoryId}</td> */}
-                <td className='td'>{cartItem.product.productName}</td>
-                <td className='td'>{cartItem.product.unitPrice}</td>
-                <td className='td'>{cartItem.product.unitsInStock}</td>
-                <td className='td'>{cartItem.quantity}</td>
+                <td className='tdCart'>{cartItem.product.productName}</td>
+                <td className='tdCart'>{cartItem.product.unitPrice}</td>
+                <td className='tdCart'>{cartItem.product.unitsInStock}</td>
+                <td className='tdCart'>{cartItem.quantity}</td>
                 <td>
-                  <Button color="danger" onClick={() => this.props.removeFromCart(cartItem.product)}>
+                  <Button id='cartListButton' onClick={() => this.props.removeFromCart(cartItem.product)}>
                     Remove
                   </Button>
                 </td>
@@ -44,7 +44,7 @@ export default class CartList extends Component {
     return (
         <div className='cartContainer'>
           <div className='buttonToRight'> {/* Butonu sola hizalamak için marginRight'ı kaldırdık */}
-            <Button id='cartButton'>
+            <Button id='cartToProductsButton'>
               <Link to="/products" id='cartLink'>
               <FaArrowLeft id='arrow'/> Products
               </Link>

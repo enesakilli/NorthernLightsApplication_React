@@ -7,6 +7,7 @@
     margin-top: 30px;
     font-size: 18;
     font-weight: bold;
+    color: #921A40;
 }
 
 .loginSecondContainer{
@@ -30,8 +31,8 @@
 
 #loginButton {
     padding: 10px 20px;
-    background-color: #667BC6;
+    background-color: #921A40;
     color: white;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
 }

@@ -30,7 +30,7 @@ export default class CategoryList extends Component {
           { // ListGroup u eleman sayisi kadar calistiracagiz
             this.state.categories.map(category => ( // Array old icin Map kullandık, map bir dongudur, eleman sayisi kadar tek tek doner, burada category eleman sayisidir
             // this.state.categories.map is not a function --> map bir array degilse bu hata alinir
-              <ListGroupItem style={{ backgroundColor: category.categoryName === this.props.currentCategory ? '#667BC6' : 'transparent', color: category.categoryName === this.props.currentCategory ? '#fff' : 'inherit', fontWeight: 'bold' }} // active sectigimiz kategorinin mavi olmasını saglar, === hem deger hem tip karsilastirmasi sart koyuyoruz
+              <ListGroupItem style={{ backgroundColor: category.categoryName === this.props.currentCategory ? '#921A40' : 'transparent', color: category.categoryName === this.props.currentCategory ? '#fff' : 'inherit', fontWeight: 'bold' }} // active sectigimiz kategorinin mavi olmasını saglar, === hem deger hem tip karsilastirmasi sart koyuyoruz
               onClick={()=>this.props.changeCategory(category)} // esitse ?true : degilse false donecek, active = {true} default olarak true
               key={category.id}> 
                 {category.categoryName}
