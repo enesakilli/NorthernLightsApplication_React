@@ -61,7 +61,7 @@ const Register = () => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
+            required 
           />
         </div>
         <div className='registerSecondContainer'>
